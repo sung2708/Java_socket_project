@@ -172,11 +172,14 @@ public Server() {
     }).start();
 }
     public static void main(String[] args) {
-         Server frame = new Server();
-        frame.setTitle("Client Socket List");
-        frame.setSize(400, 300);
-        frame.setLocationRelativeTo(null);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-    }
+    // Set java.awt.headless property to false
+    System.setProperty("java.awt.headless", "false");
+
+    Server frame = new Server();
+    frame.setTitle("Client Socket List");
+    frame.setSize(400, 300);
+    frame.setLocationRelativeTo(null);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+}
 }
